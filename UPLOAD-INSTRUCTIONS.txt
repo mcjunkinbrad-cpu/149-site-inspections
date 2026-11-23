@@ -1,0 +1,1 @@
+Upload all HTML files in this folder to the root of your GitHub repository. Keep the existing image files in the repository. The live homepage is index.html.
