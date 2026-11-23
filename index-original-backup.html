@@ -69,7 +69,7 @@
   <article class="card service-card custom-card" tabindex="0" data-target="custom"><h3>Custom Inspection</h3><p>Build an à-la-carte inspection around the specific areas you want evaluated, with live estimated pricing.</p><button class="btn service-btn" type="button">Build Your Inspection</button></article>
 </div></div></section>
 
-<section class="custom-inspection" id="custom" hidden><div class="wrap"><div class="head"><span class="ey" style="color:#e12632">CUSTOM INSPECTION</span><h2>$149 Site Inspections</h2><p>Every custom site inspection starts with a required $149 Site Visit for up to 60 minutes on-site. The base visit includes an initial property overview, review of the specific concerns you want addressed, visual evaluation of readily accessible selected areas, relevant digital photographs, documentation of notable visible findings, and a verbal overview of observations. Add only the inspection areas you want evaluated, and each selection is added to the $149 base price.</p></div><div class="custom-builder"><div class="custom-options" id="customOptions">
+<section class="custom-inspection" id="custom" hidden><div class="wrap"><div class="head"><span class="ey" style="color:#e12632">CUSTOM INSPECTION</span><h2>$149 Site Inspections</h2><p>Every custom site inspection starts with a required $149.99 Site Visit for up to 60 minutes on-site. The base visit includes an initial property overview, review of the specific concerns you want addressed, visual evaluation of readily accessible selected areas, relevant digital photographs, documentation of notable visible findings, and a verbal overview of observations. Add only the inspection areas you want evaluated, and each selection is added to the $149 base price.</p></div><div class="custom-builder"><div class="custom-options" id="customOptions">
   <label class="custom-option trip-charge"><input id="tripCharge" type="checkbox" value="Trip / Site Visit Charge" data-price="149" checked disabled><span>$149 Site Visit • Up to 60 Minutes On-Site</span><strong>$149</strong></label>
 <label class="custom-option"><input type="checkbox" value="Roof & Exterior" data-price="99"><span>Roof & Exterior</span><strong>$99</strong></label>
 <label class="custom-option"><input type="checkbox" value="Foundation / Structure" data-price="99"><span>Foundation / Structure</span><strong>$99</strong></label>
@@ -83,7 +83,7 @@
 <label class="custom-option"><input type="checkbox" value="Drainage / Grading" data-price="69"><span>Drainage / Grading</span><strong>$69</strong></label>
 <label class="custom-option"><input type="checkbox" value="Garage / Attached Structures" data-price="59"><span>Garage / Attached Structures</span><strong>$59</strong></label>
 <label class="custom-option"><input type="checkbox" value="Appliance Check" data-price="49"><span>Appliance Check</span><strong>$49</strong></label>
-</div><aside class="custom-summary"><div class="custom-total-label">Estimated $149 Site Inspection</div><div class="custom-total" id="customTotal">$149</div><p class="custom-min">The $149 Site Visit is automatically included, cannot be removed, and is the starting price before optional inspection areas are added.</p><div class="custom-selected" id="customSelected">Trip / Site Visit Charge ($149) • Add inspection areas below.</div><button class="btn" type="button" id="scheduleCustom">Schedule $149 Site Inspection</button></aside></div><p class="custom-note">Pricing shown is an estimate based on the selected inspection scope. Final scope, availability, property conditions and price are subject to confirmation before the appointment is accepted.</p></div></section>
+</div><aside class="custom-summary"><div class="custom-total-label">Estimated $149 Site Inspection</div><div class="custom-total" id="customTotal">$149</div><p class="custom-min">The $149.99 Site Visit is automatically included, cannot be removed, and is the starting price before optional inspection areas are added.</p><div class="custom-selected" id="customSelected">Trip / Site Visit Charge ($149) • Add inspection areas below.</div><button class="btn" type="button" id="scheduleCustom">Schedule $149 Site Inspection</button></aside></div><p class="custom-note">Pricing shown is an estimate based on the selected inspection scope. Final scope, availability, property conditions and price are subject to confirmation before the appointment is accepted.</p></div></section>
 <section class="issue-section" id="issues">
   <div class="issue-head">
     <span class="ey" style="color:#e12632">REAL PROBLEMS. REAL COSTS.</span>
@@ -335,7 +335,7 @@ document.getElementById('referralForm').addEventListener('submit',function(e){
       const addOns=chosen.reduce((sum,b)=>sum+Number(b.dataset.price||0),0);
       const estimate=baseCharge+addOns;
       totalEl.textContent='$'+estimate.toFixed(2);
-      const selectedParts=['Trip / Site Visit Charge ($149)'].concat(chosen.map(b=>b.value+' (+$'+b.dataset.price+')'));
+      const selectedParts=['Trip / Site Visit Charge ($149.99)'].concat(chosen.map(b=>b.value+' (+$'+b.dataset.price+')'));
       selectedEl.textContent=selectedParts.join(' • ');
       return {chosen,estimate};
     }
@@ -344,7 +344,7 @@ document.getElementById('referralForm').addEventListener('submit',function(e){
       const {chosen,estimate}=updateCustom();
       
       const notes=document.getElementById('notes');
-      if(notes)notes.value='Custom Inspection base: Trip / Site Visit Charge ($149)\nAdditional selections: '+(chosen.length?chosen.map(b=>b.value+' (+$'+b.dataset.price+')').join(', '):'None')+'\nEstimated price: $'+estimate.toFixed(2)+' (subject to confirmation).';
+      if(notes)notes.value='Custom Inspection base: Trip / Site Visit Charge ($149.99)\nAdditional selections: '+(chosen.length?chosen.map(b=>b.value+' (+$'+b.dataset.price+')').join(', '):'None')+'\nEstimated price: $'+estimate.toFixed(2)+' (subject to confirmation).';
       chooseInspection('Custom Inspection');
     });
     updateCustom();
