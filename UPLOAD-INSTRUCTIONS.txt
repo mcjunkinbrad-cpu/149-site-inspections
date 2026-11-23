@@ -1,2 +1,3 @@
-Upload every file in this ZIP to the root of the GitHub repository. Let files with matching names replace the current versions. Do not delete working repository files first. The live homepage is index.html.
-GitHub commit message: Add Sell Your Home Faster award treatment to Pre-Sale Inspection
+Upload all HTML and image files in this ZIP to the root of your GitHub repository. Let matching files replace the current versions. Keep your existing logo.png and other existing image assets in the repository. The live homepage is index.html.
+
+GitHub commit message: Add professional certifications and correct $149.99 pricing
