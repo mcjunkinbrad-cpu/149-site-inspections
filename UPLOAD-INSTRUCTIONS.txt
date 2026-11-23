@@ -1,5 +1,2 @@
 Upload every file in this ZIP to the root of the GitHub repository. Let files with matching names replace the current versions. Do not delete working repository files first. The live homepage is index.html.
-
-GitHub commit message: Redesign website to match premium inspection layout
-
-Update: Corrected hero CTA/trust-bar overlap and Treasure Valley heading divider layout.
+GitHub commit message: Add Sell Your Home Faster award treatment to Pre-Sale Inspection

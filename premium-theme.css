@@ -38,3 +38,68 @@
   .trustin{grid-template-columns:1fr 1fr}
   .trustin div:nth-child(3),.trustin div:nth-child(4){grid-column:auto}
 }
+
+/* Pre-Sale award card treatment */
+.presale-award-card{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  border:2px solid #c89216!important;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.94) 47%,rgba(255,251,234,.84) 66%,rgba(255,248,221,.58) 100%),
+    url('sell-your-home-faster-award.png') right -36px center/240px auto no-repeat!important;
+  box-shadow:0 12px 30px rgba(92,63,0,.18), inset 0 0 0 1px rgba(255,225,139,.9)!important;
+}
+.presale-award-card:after{
+  content:"SELL YOUR HOME FASTER";
+  position:absolute;
+  right:18px;
+  top:16px;
+  z-index:0;
+  max-width:120px;
+  color:#7d5700;
+  font-family:"Arial Narrow","Liberation Sans Narrow",Impact,sans-serif;
+  font-size:12px;
+  font-weight:900;
+  line-height:1.02;
+  letter-spacing:.5px;
+  text-align:center;
+  text-transform:uppercase;
+  text-shadow:0 1px 0 #fff8d8;
+}
+.presale-award-card>*{position:relative;z-index:1}
+.presale-award-card h3{color:#052b55!important}
+.presale-award-card .service-price{color:#c91624!important}
+.presale-award-card .service-best{
+  background:rgba(255,255,255,.78);
+  border-left:4px solid #d9a322;
+  padding:9px 11px;
+  border-radius:4px;
+}
+.presale-award-card .service-btn{
+  background:linear-gradient(180deg,#143e69,#052b55)!important;
+  box-shadow:0 5px 12px rgba(5,43,85,.16)!important;
+}
+.presale-award-card:hover,.presale-award-card:focus-within{
+  border-color:#f0bf3a!important;
+  box-shadow:0 16px 38px rgba(92,63,0,.24),inset 0 0 0 1px #ffe9a3!important;
+}
+/* Compact homepage card: keep the seal as a premium background accent while preserving readability. */
+.presale-award-home{
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.95) 58%,rgba(255,249,225,.66) 100%),
+    url('sell-your-home-faster-award.png') right -22px center/150px auto no-repeat!important;
+}
+.presale-award-home:after{right:10px;top:10px;max-width:88px;font-size:9px}
+@media(max-width:800px){
+  .presale-award-card{
+    background:
+      linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.91)),
+      url('sell-your-home-faster-award.png') right -52px top 18px/210px auto no-repeat!important;
+  }
+  .presale-award-card:after{right:12px;top:15px;max-width:104px;font-size:10px}
+}
+@media(max-width:440px){
+  .presale-award-card{background:linear-gradient(180deg,#fff,#fff8df)!important}
+  .presale-award-card:after{position:static;display:inline-block;max-width:none;margin:0 0 8px;color:#9a6a00}
+}
